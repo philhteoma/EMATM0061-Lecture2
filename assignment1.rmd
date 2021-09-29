@@ -102,7 +102,26 @@ solve(y_matrix) %*% x_matrix
 ```
 We should be able to use solve() for Y^-1^X
 
+```{r}
+solve(y_matrix, x_matrix)
+```
 
+## Simple R Functions
+
+Create a simple r function which takes all numbers between 0 and n which are divisble by 2 and/or 7
+```{r}
+the_func <- function(n) {
+ sum <- 0
+ for (i in seq(n-1)) {
+   if (i%%2==0 | i%%7==0) { #Modulo is double % in r, | for the or operator
+     sum <- sum+i
+   }
+ }
+ return(sum)
+}
+
+print(the_func(1000))
+```
 
 
 ## R Markdown
